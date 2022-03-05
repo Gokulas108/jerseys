@@ -17,8 +17,8 @@ app
 		// const { Server } = require("socket.io");
 		const io = require("socket.io")(http);
 		server.set("io", io);
-		const userApis = require("./routes/userApis.js");
-		const passApis = require("./routes/passApis.js");
+		const userApis = require("./server/routes/userApis.js");
+		const passApis = require("./server/routes/passApis.js");
 		server.use(
 			session({
 				secret: process.env.SECRET_KEY,
